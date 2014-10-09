@@ -28,7 +28,7 @@ func init() {
 <html>
 	<head> <title>Proxy Error</title> </head>
 	<body>
-	Can not connect to the host	
+	  Can not connect to the host
 	</body>
 </html>
 `
