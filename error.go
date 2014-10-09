@@ -19,16 +19,16 @@ var headRawTmpl = "HTTP/1.1 {{.CodeReason}}\r\n" +
 var errPageTmpl, headTmpl *template.Template
 
 func init() {
-	err := os.Hostname()
+	hostName, err := os.Hostname()
 	if err != nil {
-		
+		hostName = "unknown host"
 	}
 
 	errPageRawTmpl := `<!DOCTYPE html>
 <html>
 	<head> <title>Proxy Error</title> </head>
 	<body>
-	  Can not connect to the host
+		<h1>{{.H1}}</h1>
 	</body>
 </html>
 `
