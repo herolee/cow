@@ -19,9 +19,9 @@ var headRawTmpl = "HTTP/1.1 {{.CodeReason}}\r\n" +
 var errPageTmpl, headTmpl *template.Template
 
 func init() {
-	hostName, err := os.Hostname()
+	err := os.Hostname()
 	if err != nil {
-		hostName = "unknown host"
+		
 	}
 
 	errPageRawTmpl := `<!DOCTYPE html>
