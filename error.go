@@ -26,9 +26,12 @@ func init() {
 
 	errPageRawTmpl := `<!DOCTYPE html>
 <html>
-	<head> <title>Proxy Error</title> </head>
+	<head> <title>APN Proxy</title> </head>
 	<body>
 		<h1>{{.H1}}</h1>
+		<hr />
+		Host <i>` + hostName + `</i> <br />
+		{{.T}}
 	</body>
 </html>
 `
